@@ -1,25 +1,32 @@
-var builder = WebApplication.CreateBuilder(args);
+using FarmAPI;
+using FarmAPI.Data;
+using Microsoft.EntityFrameworkCore;
 
-// Add services to the container.
-builder.Services.AddRazorPages();
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+Console.WriteLine("Servidor iniciado. Aguardando...");
+if (app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
-    app.UseHsts();
+    app.UseDeveloperExceptionPage();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
-
-app.UseRouting();
-
 app.UseAuthorization();
+app.MapControllers();
 
-app.MapStaticAssets();
-app.MapRazorPages()
-   .WithStaticAssets();
+var task = app.RunAsync();
 
-app.Run();
+//rodando os testes (pode tirar isso)
+await ApiTester.RunTests();
+
+//rodar o servidor depois dos teste
+await task;
