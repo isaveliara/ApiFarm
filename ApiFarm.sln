@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiFarm", "ApiFarm\ApiFarm.csproj", "{12AE54E8-CD63-32C9-FC23-CFC85B9D68A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiFarm", "ApiFarm.csproj", "{830B47F9-6317-473C-4C5B-93F4235DF17A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,15 +10,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{12AE54E8-CD63-32C9-FC23-CFC85B9D68A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{12AE54E8-CD63-32C9-FC23-CFC85B9D68A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{12AE54E8-CD63-32C9-FC23-CFC85B9D68A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{12AE54E8-CD63-32C9-FC23-CFC85B9D68A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{830B47F9-6317-473C-4C5B-93F4235DF17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{830B47F9-6317-473C-4C5B-93F4235DF17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{830B47F9-6317-473C-4C5B-93F4235DF17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{830B47F9-6317-473C-4C5B-93F4235DF17A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {14A7FAE7-72AE-487B-BDCA-51ABEC4F3DAE}
+		SolutionGuid = {41A3BD54-596E-49FF-95D9-EC9111EC2543}
 	EndGlobalSection
 EndGlobal
