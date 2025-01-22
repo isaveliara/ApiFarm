@@ -1,4 +1,4 @@
-@ApiFarm_HostAddress = http://localhost:5145
+@ApiFarm_HostAddress = https://farm.squareweb.app:80
 
 GET {{ApiFarm_HostAddress}}/weatherforecast/
 Accept: application/json

@@ -9,7 +9,11 @@ namespace FarmAPI
 
         public static async Task RunTests()
         {
-            client.BaseAddress = new Uri("http://localhost:5145/api/"); //minha api olha
+            DotNetEnv.Env.Load();
+            string? domain = Environment.GetEnvironmentVariable("API_URL")
+                  ?? throw new Exception("API_URL environment variable is not set.");
+
+            client.BaseAddress = new Uri($"{domain}/api/"); //a api olha
 
             //instanciar um novo cara
             var newUser = new{
